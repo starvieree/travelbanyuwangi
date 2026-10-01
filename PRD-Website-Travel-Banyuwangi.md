@@ -110,7 +110,7 @@ Wisata Banyuwangi (Kawah Ijen, Taman Nasional Baluran, Pantai Pulau Merah, Djawa
 ## 5. Kebutuhan Fungsional per Halaman
 
 ### 5.1 Beranda
-- **Hero:** gambar/video latar ringan (poster `.webp`, video opsional dan *lazy*), H1 yang memuat keyword utama (mis. "Paket Wisata Banyuwangi: Open Trip & Private Trip Kawah Ijen, Baluran, Pulau Merah"), CTA utama "Tanya Paket via WhatsApp".
+- **Hero:** gambar/video latar ringan (poster `.webp`, video opsional dan *lazy*), H1 yang memuat keyword utama (mis. "Paket Wisata Banyuwangi: Open Trip & Private Trip Kawah Ijen, Baluran, Pulau Merah"), CTA utama "Konsultasi".
 - **USP:** harga transparan, guide lokal, itinerary fleksibel, armada terawat (4 poin ikon).
 - **Highlight destinasi populer:** kartu Ijen, Baluran, Djawatan, Pulau Merah.
 - **Paket unggulan:** 3 kartu dengan harga mulai dari + CTA.
@@ -595,7 +595,7 @@ Google Search Console (properti **Domain**), Google Analytics 4, Google Business
   <meta name="theme-color" content="#0b6e4f">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.jpg">
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Performa -->

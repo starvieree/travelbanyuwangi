@@ -689,7 +689,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 90px;
 }
 
 /*--------------------------------------------------------------
