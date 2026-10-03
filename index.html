@@ -109,8 +109,8 @@
         <div class="row align-items-center">
           <div class="col-lg-7">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
-              <h1 class="hero-title">Wisata Banyuwangi: Open Trip & Private Trip Kawah Ijen, Baluran, Pulau Merah</h1>
-              <p class="hero-subtitle">Jelajahi keindahan Banyuwangi dengan guide lokal berpengalaman. Harga transparan, itinerary fleksibel, dan armada terawat.</p>
+              <h1 class="hero-title">Paket Wisata Banyuwangi: Open & Private Trip</h1>
+              <p class="hero-subtitle">Jelajahi magisnya Kawah Ijen, eksotisme Baluran, hingga cantiknya Pulau Merah tanpa ribet. Bersama guide lokal berpengalaman, nikmati liburan nyaman dengan harga transparan, pilih Open atau Private Trip dan itinerary yang fleksibel.</p>
               <div class="hero-buttons">
                 <a href="https://wa.me/628970624723?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20wisata%20Banyuwangi.%20Boleh%20minta%20info%20lengkapnya%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary me-3">Konsultasi</a>
                 <a href="tours.html" class="btn btn-outline">Lihat Paket</a>
@@ -121,30 +121,30 @@
           <div class="col-lg-5">
             <div class="booking-form-wrapper" data-aos="fade-left" data-aos-delay="200">
               <div class="booking-form">
-                <h3 class="form-title">Plan Your Adventure</h3>
-                <form action="" class="">
+                <h3 class="form-title">Rencanakan Perjalanan Anda</h3>
+                <form id="hero-booking-form">
                   <div class="form-group mb-3">
-                    <label for="destination">Destination</label>
+                    <label for="destination">Destinasi</label>
                     <select name="destination" id="destination" class="form-select" required="">
-                      <option value="">Choose your destination</option>
-                      <option value="europe">Europe</option>
-                      <option value="asia">Asia</option>
-                      <option value="america">America</option>
-                      <option value="africa">Africa</option>
-                      <option value="oceania">Oceania</option>
+                      <option value="">Pilih destinasi</option>
+                      <option value="Kawah Ijen">Kawah Ijen</option>
+                      <option value="Taman Nasional Baluran">Taman Nasional Baluran</option>
+                      <option value="Pantai Pulau Merah">Pantai Pulau Merah</option>
+                      <option value="Djawatan Benculuk">Djawatan Benculuk</option>
+                      <option value="Taman Nasional Alas Purwo">Taman Nasional Alas Purwo</option>
                     </select>
                   </div>
 
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group mb-3">
-                        <label for="checkin">Departure Date</label>
+                        <label for="checkin">Tanggal Mulai</label>
                         <input type="date" name="checkin" id="checkin" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group mb-3">
-                        <label for="checkout">Return Date</label>
+                        <label for="checkout">Tanggal Selesai</label>
                         <input type="date" name="checkout" id="checkout" class="form-control" required="">
                       </div>
                     </div>
@@ -153,42 +153,79 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group mb-3">
-                        <label for="adults">Adults</label>
+                        <label for="adults">Jumlah Dewasa</label>
                         <select name="adults" id="adults" class="form-select" required="">
-                          <option value="1">1 Adult</option>
-                          <option value="2">2 Adults</option>
-                          <option value="3">3 Adults</option>
-                          <option value="4">4+ Adults</option>
+                          <option value="1">1 Orang</option>
+                          <option value="2">2 Orang</option>
+                          <option value="3">3 Orang</option>
+                          <option value="4">4+ Orang</option>
                         </select>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group mb-3">
-                        <label for="children">Children</label>
+                        <label for="children">Jumlah Anak</label>
                         <select name="children" id="children" class="form-select">
-                          <option value="0">No Children</option>
-                          <option value="1">1 Child</option>
-                          <option value="2">2 Children</option>
-                          <option value="3">3+ Children</option>
+                          <option value="0">Tanpa Anak</option>
+                          <option value="1">1 Anak</option>
+                          <option value="2">2 Anak</option>
+                          <option value="3">3+ Anak</option>
                         </select>
                       </div>
                     </div>
                   </div>
 
                   <div class="form-group mb-3">
-                    <label for="tour-type">Tour Type</label>
+                    <label for="tour-type">Jenis Paket</label>
                     <select name="tour_type" id="tour-type" class="form-select" required="">
-                      <option value="">Select tour type</option>
-                      <option value="adventure">Adventure</option>
-                      <option value="cultural">Cultural</option>
-                      <option value="relaxation">Relaxation</option>
-                      <option value="family">Family</option>
-                      <option value="luxury">Luxury</option>
+                      <option value="">Pilih jenis paket</option>
+                      <option value="Open Trip">Open Trip</option>
+                      <option value="Private Trip">Private Trip</option>
                     </select>
                   </div>
 
-                  <button type="submit" class="btn btn-primary w-100">Find Your Perfect Trip</button>
+                  <button type="button" onclick="kirimPesanWA()" class="btn btn-primary w-100">Tanya via WhatsApp</button>
                 </form>
+                <script>
+                  // Set min date to today for both date inputs
+                  (function() {
+                    var today = new Date().toISOString().split('T')[0];
+                    var checkin = document.getElementById('checkin');
+                    var checkout = document.getElementById('checkout');
+                    checkin.min = today;
+                    checkout.min = today;
+                    checkin.addEventListener('change', function() {
+                      checkout.min = this.value || today;
+                      if (checkout.value && checkout.value < this.value) checkout.value = this.value;
+                    });
+                  })();
+
+                  function kirimPesanWA() {
+                    var form = document.getElementById('hero-booking-form');
+                    var destination = document.getElementById('destination').value;
+                    var checkin = document.getElementById('checkin').value;
+                    var checkout = document.getElementById('checkout').value;
+                    var adults = document.getElementById('adults').value;
+                    var children = document.getElementById('children').value;
+                    var tourType = document.getElementById('tour-type').value;
+
+                    if (!destination || !checkin || !checkout || !tourType) {
+                      alert('Mohon lengkapi semua field yang wajib diisi.');
+                      return;
+                    }
+
+                    var pesan = 'Halo, saya ingin memesan paket wisata:\n'
+                      + '- Destinasi: ' + destination + '\n'
+                      + '- Tanggal Mulai: ' + checkin + '\n'
+                      + '- Tanggal Selesai: ' + checkout + '\n'
+                      + '- Jumlah Dewasa: ' + adults + ' orang\n'
+                      + '- Jumlah Anak: ' + children + ' anak\n'
+                      + '- Jenis Paket: ' + tourType + '\n'
+                      + 'Mohon info lebih lanjut. Terima kasih!';
+
+                    window.open('https://wa.me/628970624723?text=' + encodeURIComponent(pesan), '_blank');
+                  }
+                </script>
               </div>
             </div>
           </div>
@@ -685,38 +722,6 @@
                 <span class="stat-label">Wisatawan Bahagia</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="newsletter-section" data-aos="fade-up" data-aos-delay="300">
-          <div class="newsletter-card">
-            <div class="newsletter-content">
-              <div class="newsletter-icon">
-                <i class="bi bi-envelope-heart"></i>
-              </div>
-              <div class="newsletter-text">
-                <h3>Dapatkan Info Terbaru</h3>
-                <p>Berlangganan newsletter kami untuk mendapatkan info promo dan artikel wisata terbaru.</p>
-              </div>
-            </div>
-
-            <form class="php-email-form newsletter-form" action="forms/newsletter.php" method="post">
-              <div class="form-wrapper">
-                <input type="email" name="email" class="email-input" placeholder="Alamat email Anda" required="">
-                <button type="submit" class="subscribe-btn">
-                  <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Terima kasih telah berlangganan!</div>
-
-              <div class="trust-indicators">
-                <i class="bi bi-lock"></i>
-                <span>Kami menjaga privasi Anda. Berhenti berlangganan kapan saja.</span>
-              </div>
-            </form>
           </div>
         </div>
 

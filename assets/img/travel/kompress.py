@@ -51,8 +51,8 @@ def compress_to_webp(input_path, output_path, target_kb=50):
 
 # === Cara Penggunaan ===
 # Ganti nama file sesuai dengan file yang Anda miliki
-input_gambar = "tim-wisata-banyuwangi.jpg"
+input_gambar = "banteng-di-taman-nasional-baluran.jpg"
  
-output_gambar = "tim-wisata-banyuwangi.webp"
+output_gambar = "banteng-di-taman-nasional-baluran.webp"
 
 compress_to_webp(input_gambar, output_gambar, target_kb=50)
