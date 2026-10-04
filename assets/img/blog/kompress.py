@@ -51,29 +51,29 @@ def compress_to_webp(input_path, output_path, target_kb=50):
 
 # === Cara Penggunaan ===
 # Ganti nama file sesuai dengan file yang Anda miliki
-input_gambar1 = "taman-nasional-alas-purwo.jpg"
-input_gambar2 = "surfing-gland-plengkung.jpg"
-input_gambar3 = "savana-sadengan-alas-purwo.jpg"
-input_gambar4 = "private-trip-alas-purwo.jpg"
-input_gambar5 = "pantai-pancur-alas-purwo.jpg"
-input_gambar6 = "open-trip-alas-purwo-explorer.jpg"
-input_gambar7 = "open-trip-alas-purwo-2h1m.jpg"
-input_gambar8 = "hutan-bambu-alas-purwo.jpg"
+input_gambar1 = "tips-liburan-ke-banyuwangi.jpg"
+input_gambar2 = "persiapan-pendakian-ijen.jpg"
+input_gambar3 = "kuliner-banyuwangi.jpg"
+input_gambar4 = "destinasi-tersembunyi.jpg"
+# input_gambar5 = "pantai-pancur-alas-purwo.jpg"
+# input_gambar6 = "open-trip-alas-purwo-explorer.jpg"
+# input_gambar7 = "open-trip-alas-purwo-2h1m.jpg"
+# input_gambar8 = "hutan-bambu-alas-purwo.jpg"
 
-output_gambar1 = "taman-nasional-alas-purwo.webp"
-output_gambar2 = "surfing-gland-plengkung.webp"
-output_gambar3 = "savana-sadengan-alas-purwo.webp"
-output_gambar4 = "private-trip-alas-purwo.webp"
-output_gambar5 = "pantai-pancur-alas-purwo.webp"
-output_gambar6 = "open-trip-alas-purwo-explorer.webp"
-output_gambar7 = "open-trip-alas-purwo-2h1m.webp"
-output_gambar8 = "hutan-bambu-alas-purwo.webp"
+output_gambar1 = "tips-liburan-ke-banyuwangi.webp"
+output_gambar2 = "persiapan-pendakian-ijen.webp"
+output_gambar3 = "kuliner-banyuwangi.webp"
+output_gambar4 = "destinasi-tersembunyi.webp"
+# output_gambar5 = "pantai-pancur-alas-purwo.webp"
+# output_gambar6 = "open-trip-alas-purwo-explorer.webp"
+# output_gambar7 = "open-trip-alas-purwo-2h1m.webp"
+# output_gambar8 = "hutan-bambu-alas-purwo.webp"
 
 compress_to_webp(input_gambar1, output_gambar1, target_kb=50)
 compress_to_webp(input_gambar2, output_gambar2, target_kb=50)
 compress_to_webp(input_gambar3, output_gambar3, target_kb=50)
 compress_to_webp(input_gambar4, output_gambar4, target_kb=50)
-compress_to_webp(input_gambar5, output_gambar5, target_kb=50)
-compress_to_webp(input_gambar6, output_gambar6, target_kb=50)
-compress_to_webp(input_gambar7, output_gambar7, target_kb=50)
-compress_to_webp(input_gambar8, output_gambar8, target_kb=50)
+# compress_to_webp(input_gambar5, output_gambar5, target_kb=50)
+# compress_to_webp(input_gambar6, output_gambar6, target_kb=50)
+# compress_to_webp(input_gambar7, output_gambar7, target_kb=50)
+# compress_to_webp(input_gambar8, output_gambar8, target_kb=50)
