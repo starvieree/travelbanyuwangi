@@ -248,7 +248,7 @@
       message = 'Halo, saya ingin bertanya tentang layanan wisata Banyuwangi.';
     }
 
-    waButton.href = `https://wa.me/628970624723?text=${encodeURIComponent(message)}`;
+    waButton.href = `https://wa.me/6288989643555?text=${encodeURIComponent(message)}`;
     waButton.target = '_blank';
     waButton.rel = 'noopener noreferrer';
     waButton.className = 'floating-wa-btn';

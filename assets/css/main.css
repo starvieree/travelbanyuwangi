@@ -665,8 +665,8 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: -15px;
+  right: 20px;
+  bottom: 90px;
   z-index: 99999;
   background-color: var(--accent-color);
   width: 44px;
@@ -689,7 +689,6 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -697,7 +696,7 @@ h6 {
 --------------------------------------------------------------*/
 .floating-wa-btn {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   width: 60px;
   height: 60px;

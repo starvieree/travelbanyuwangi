@@ -7,7 +7,7 @@
 | **Status** | Draft untuk review |
 | **Stack** | HTML5, CSS3, JavaScript ringan, Bootstrap (template BootstrapMade) |
 | **Domain utama** | `https://wisatabanyuwangi.web.id` (non-www, HTTPS) |
-| **Kanal konversi** | WhatsApp — 08970624723 (`628970624723`) |
+| **Kanal konversi** | WhatsApp — 088989643555 (`6288989643555`) |
 
 ---
 
@@ -72,7 +72,7 @@ Wisata Banyuwangi (Kawah Ijen, Taman Nasional Baluran, Pantai Pulau Merah, Djawa
 ### 3.3 Asumsi & Ketergantungan
 - Admin menyediakan data paket (harga, itinerary, fasilitas), foto asli, dan testimoni.
 - Domain, hosting statis (mis. Netlify/Cloudflare Pages/hosting biasa dengan HTTPS) tersedia.
-- Nomor WhatsApp 08970624723 aktif dan dipantau.
+- Nomor WhatsApp 088989643555 aktif dan dipantau.
 
 ---
 
@@ -177,8 +177,8 @@ Alamat lengkap, jam operasional, Google Maps embed, tombol WhatsApp, FAQ umum (p
 ## 6. Spesifikasi CTA WhatsApp
 
 ### 6.1 Aturan Umum
-- **Semua** tombol aksi (Pesan Sekarang, Tanya Paket, Hubungi Kami, dsb.) mengarah ke WhatsApp nomor **08970624723**.
-- Format API: `https://wa.me/628970624723?text=<pesan ter-encode>` (kode negara 62, tanpa angka 0 di depan).
+- **Semua** tombol aksi (Pesan Sekarang, Tanya Paket, Hubungi Kami, dsb.) mengarah ke WhatsApp nomor **088989643555**.
+- Format API: `https://wa.me/6288989643555?text=<pesan ter-encode>` (kode negara 62, tanpa angka 0 di depan).
 - Link dibuka di tab baru: `target="_blank" rel="noopener noreferrer"`.
 - Nomor cukup dikelola di satu tempat (konstanta JS) atau konsisten di semua file agar mudah diubah.
 
@@ -196,7 +196,7 @@ Alamat lengkap, jam operasional, Google Maps embed, tombol WhatsApp, FAQ umum (p
 
 **Contoh URL ter-encode:**
 ```
-https://wa.me/628970624723?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20wisata%20Banyuwangi.
+https://wa.me/6288989643555?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20wisata%20Banyuwangi.
 ```
 
 ### 6.3 Floating Button
@@ -281,7 +281,7 @@ Seluruh markup ditempatkan di `<head>` (atau sebelum `</body>`) dan wajib lolos 
   "logo": "https://wisatabanyuwangi.web.id/assets/img/logo.webp",
   "image": "https://wisatabanyuwangi.web.id/assets/img/og-home.webp",
   "description": "Paket wisata Banyuwangi: open trip dan private trip ke Kawah Ijen, Baluran, dan Pulau Merah dengan guide lokal.",
-  "telephone": "+628970624723",
+  "telephone": "+6288989643555",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "[Alamat lengkap]",
@@ -427,7 +427,7 @@ Kontras warna WCAG AA, navigasi keyboard, `alt` pada gambar informatif, label AR
 ### 14.1 Fungsional
 - [ ] Seluruh halaman pada sitemap dirender rapi tanpa *broken layout* di mobile, tablet, dan desktop.
 - [ ] Seluruh tautan menu, breadcrumb, dan footer berfungsi (tidak ada 404 internal).
-- [ ] Setiap tombol CTA membuka WhatsApp (aplikasi atau web) ke nomor **08970624723** dengan *pre-filled text* sesuai halaman.
+- [ ] Setiap tombol CTA membuka WhatsApp (aplikasi atau web) ke nomor **088989643555** dengan *pre-filled text* sesuai halaman.
 - [ ] Tombol floating WhatsApp tampil di kanan bawah di semua halaman (mobile & desktop) dan tidak menutupi konten penting.
 - [ ] Setiap halaman paket memuat itinerary, harga, include/exclude, FAQ, dan CTA.
 - [ ] Halaman 404 kustom berfungsi.
@@ -496,7 +496,7 @@ Kontras warna WCAG AA, navigasi keyboard, `alt` pada gambar informatif, label AR
 
 ## 18. Checklist Pra-Peluncuran
 
-- [ ] Nomor WhatsApp 08970624723 diuji di setiap jenis halaman
+- [ ] Nomor WhatsApp 088989643555 diuji di setiap jenis halaman
 - [ ] Semua placeholder `[ ... ]` sudah diganti
 - [ ] Favicon, logo, dan gambar OG terpasang
 - [ ] Redirect HTTPS & versi domain utama benar
@@ -511,7 +511,7 @@ Kontras warna WCAG AA, navigasi keyboard, `alt` pada gambar informatif, label AR
 
 # LAMPIRAN — Konfigurasi Detail SEO, AEO & GEO
 
-> Domain: **https://wisatabanyuwangi.web.id** · Nama situs (sementara): **Wisata Banyuwangi** · Nomor WhatsApp: **628970624723**
+> Domain: **https://wisatabanyuwangi.web.id** · Nama situs (sementara): **Wisata Banyuwangi** · Nomor WhatsApp: **6288989643555**
 > Ganti nilai `[...]` dengan data final sebelum rilis.
 
 ---
@@ -804,7 +804,7 @@ https://www.wisatabanyuwangi.web.id/*  https://wisatabanyuwangi.web.id/:splat  3
       "logo": "https://wisatabanyuwangi.web.id/assets/img/logo.webp",
       "image": "https://wisatabanyuwangi.web.id/assets/img/og/home.jpg",
       "description": "Layanan open trip, private trip, dan sewa mobil wisata di Banyuwangi dengan guide lokal.",
-      "telephone": "+628970624723",
+      "telephone": "+6288989643555",
       "email": "info@wisatabanyuwangi.web.id",
       "priceRange": "$$",
       "address": {
@@ -828,7 +828,7 @@ https://www.wisatabanyuwangi.web.id/*  https://wisatabanyuwangi.web.id/:splat  3
       }],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+628970624723",
+        "telephone": "+6288989643555",
         "contactType": "customer service",
         "areaServed": "ID",
         "availableLanguage": ["id", "en"]
@@ -1059,7 +1059,7 @@ Catat hasil dalam tabel pemantauan (tanggal, platform, prompt, dikutip ya/tidak,
 - [ ] Tidak ada halaman yatim (semua dapat dicapai ≤ 3 klik dari beranda)
 - [ ] Tidak ada tautan rusak internal/eksternal
 - [ ] Halaman 404 mengembalikan status HTTP 404 (bukan 200)
-- [ ] CTA WhatsApp ke `628970624723` benar di semua halaman; event `whatsapp_click` tercatat
+- [ ] CTA WhatsApp ke `6288989643555` benar di semua halaman; event `whatsapp_click` tercatat
 
 ### K.2 Tools Validasi
 | Tujuan | Tool |
