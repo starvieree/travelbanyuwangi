@@ -92,6 +92,52 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Filter Tours
+   */
+  const filterDestination = document.getElementById('filter-destination');
+  const filterType = document.getElementById('filter-type');
+  const filterDuration = document.getElementById('filter-duration');
+  const filterPrice = document.getElementById('filter-price');
+  const tourCards = document.querySelectorAll('.tour-card');
+
+  function filterTours() {
+    const destination = filterDestination.value;
+    const type = filterType.value;
+    const duration = filterDuration.value;
+    const priceRange = filterPrice.value;
+
+    tourCards.forEach(card => {
+      const title = card.querySelector('h4').innerText.toLowerCase();
+      const priceText = card.querySelector('.tour-price').innerText.replace(/[^0-9]/g, '');
+      const price = parseInt(priceText);
+      const durationText = card.querySelector('.tour-details span').innerText;
+      
+      const matchesDestination = destination === '' || title.includes(destination.replace('-', ' '));
+      const matchesType = type === '' || (type === 'open-trip' ? title.includes('open trip') : title.includes('private trip'));
+      const matchesDuration = duration === '' || (duration === '1' ? durationText.includes('1 Hari') : durationText.includes('2 Hari'));
+      
+      let matchesPrice = true;
+      if (priceRange === '0-500') matchesPrice = price < 500000;
+      else if (priceRange === '500-1000') matchesPrice = price >= 500000 && price <= 1000000;
+      else if (priceRange === '1000-2000') matchesPrice = price > 1000000 && price <= 2000000;
+      else if (priceRange === '2000+') matchesPrice = price > 2000000;
+
+      if (matchesDestination && matchesType && matchesDuration && matchesPrice) {
+        card.parentElement.style.display = 'block';
+      } else {
+        card.parentElement.style.display = 'none';
+      }
+    });
+  }
+
+  if (filterDestination && filterType && filterDuration && filterPrice) {
+    filterDestination.addEventListener('change', filterTours);
+    filterType.addEventListener('change', filterTours);
+    filterDuration.addEventListener('change', filterTours);
+    filterPrice.addEventListener('change', filterTours);
+  }
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {

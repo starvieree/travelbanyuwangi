@@ -334,19 +334,106 @@
 
   @media (max-width: 768px) {
     .featured-destination {
-      height: 450px;
+      height: auto;
       margin-bottom: 30px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--surface-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      .destination-overlay {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        &::before {
+          display: none;
+        }
+
+        img {
+          position: relative;
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
 
       .destination-info {
-        padding: 25px;
+        position: relative;
+        padding: 20px;
+        background: var(--surface-color);
+        color: var(--default-color);
+        z-index: 1;
+
+        .destination-tag {
+          position: absolute;
+          top: -180px;
+          left: 20px;
+          z-index: 2;
+        }
 
         h3 {
-          font-size: 24px;
+          font-size: 20px;
+          color: var(--heading-color);
+          margin-bottom: 10px;
+        }
+
+        .location {
+          color: var(--accent-color);
+          margin-bottom: 10px;
+        }
+
+        .description {
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+          margin-bottom: 15px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .destination-meta {
-          flex-direction: column;
-          gap: 10px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+          .tours-count, .rating {
+            color: var(--default-color);
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            backdrop-filter: none;
+          }
+        }
+
+        .price-info {
+          margin-bottom: 15px;
+
+          .starting-from {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+          }
+
+          .amount {
+            color: var(--accent-color);
+            font-size: 20px;
+          }
+        }
+
+        .explore-btn {
+          width: 100%;
+          justify-content: center;
+          background: color-mix(in srgb, var(--accent-color), transparent 90%);
+          color: var(--accent-color);
+          border: none;
+
+          &:hover {
+            background: var(--accent-color);
+            color: var(--contrast-color);
+          }
         }
       }
     }
