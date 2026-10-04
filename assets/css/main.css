@@ -689,7 +689,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 90px;
+  bottom: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -697,7 +697,7 @@ h6 {
 --------------------------------------------------------------*/
 .floating-wa-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   width: 60px;
   height: 60px;
@@ -726,7 +726,10 @@ h6 {
 
 @media (max-width: 768px) {
   .floating-wa-btn {
-    bottom: 80px; /* Adjust for mobile to not overlap with other elements */
+    bottom: 20px;
+  }
+  .scroll-top.active {
+    bottom: 90px;
   }
 }
 
