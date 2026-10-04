@@ -6096,6 +6096,7 @@ section,
   grid-template-columns: minmax(200px, 300px) 1fr;
   gap: 3rem;
   position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
@@ -6112,6 +6113,7 @@ section,
   background: var(--surface-color);
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 10;
 }
 
 @media (max-width: 992px) {
@@ -8610,3 +8612,54 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.related-post-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+.related-post-card:hover {
+  transform: translateY(-5px);
+}
+.related-post-card .post-img {
+  height: 200px;
+  overflow: hidden;
+}
+.related-post-card .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.related-post-card .post-content {
+  padding: 20px;
+}
+.related-post-card .post-content h4 {
+  font-size: 18px;
+  margin: 0;
+}
+.related-post-card .post-content h4 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+.related-post-card .post-content h4 a:hover {
+  color: var(--accent-color);
+}
+
+
+.related-post-card .post-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+.related-post-card .post-content .read-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.related-post-card .post-content .read-more:hover {
+  text-decoration: underline;
+}
+
